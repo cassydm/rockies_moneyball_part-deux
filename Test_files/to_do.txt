@@ -1,0 +1,11 @@
+Team_Batting_2024_url="https://www.baseball-reference.com/teams/COL/2024.shtml#team_batting"
+**Cassy working on visualizations and data modifications for 2024 and 2007**
+
+Team_Pitching_2024_url="https://www.baseball-reference.com/teams/COL/2024.shtml#team_pitching"
+**Liz working on defining get_table function for pitching and possibly visuals for 2024 and 2007**
+
+Team_Roster_2024_url="https://www.baseball-reference.com/teams/COL/2024.shtml#appearances"
+**Sandokan working on defining get_table function for roster and possible visuals for 2024 and 2007**
+
+Team_Fielding_2024_url="https://www.baseball-reference.com/teams/COL/2024-fielding.shtml#standard_fielding"
+**Howard working on defining get_table function for fielding and possibly visuals for 2024 and 2007**
