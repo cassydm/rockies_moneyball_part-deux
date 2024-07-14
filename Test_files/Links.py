@@ -70,3 +70,5 @@ Players_Value_Pitching_2007_url="https://www.baseball-reference.com/teams/COL/20
 # %%
 # Rockies Hex Colors
 Rockies_Purple_Hex="#333366"
+Rockies_Silver_Hex="#C4CED4"
+Rockies_Black_Hex="#000000"
