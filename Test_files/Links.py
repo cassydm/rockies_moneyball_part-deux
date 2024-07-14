@@ -67,4 +67,6 @@ Players_Value_2007_url="https://www.baseball-reference.com/teams/COL/2007.shtml#
 # 2007 Players Value Pitching link
 Players_Value_Pitching_2007_url="https://www.baseball-reference.com/teams/COL/2007.shtml#players_value_pitching"
 
-
+# %%
+# Rockies Hex Colors
+Rockies_Purple_Hex="#333366"
