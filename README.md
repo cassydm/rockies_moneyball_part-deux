@@ -47,6 +47,9 @@ To replicate or extend this analysis:
 *Improving ERA and K/BB Ratio, while focusing on identifying CL and RP players for trades*
 
 ### Fielding
+The 2007 Colorado Rockies team did out perform the 2024 team in terms of overall team fielding percentage and assist. There is a significant difference in the team fieling percentage for the left field postion.
 
+*Recommendation:*  
+*Improving fielding percentage for left field position, while focusing on identifying possible trades for this position*
 ### Performance vs. Salary
 
