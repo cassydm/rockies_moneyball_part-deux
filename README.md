@@ -41,10 +41,10 @@ To replicate or extend this analysis:
 ### Batting
 
 ### Pitching
-    2007 pitching roster out-performed the 2024 team in terms of preventing earned runs, striking-out batters and reducing the number of walks. 2024 closing pitchers and relief pitchers performed worse relative to the 2007 roster. 2024 starting pitchers showed fewer deficiencies regarding Home Runs Allowed, ERA and Strike-out to Ball Ratio. 
+2007 pitching roster out-performed the 2024 team in terms of preventing earned runs, striking-out batters and reducing the number of walks. 2024 closing pitchers and relief pitchers performed worse relative to the 2007 roster. 2024 starting pitchers showed fewer deficiencies regarding Home Runs Allowed, ERA and Strike-out to Ball Ratio. 
 
-    *Recommendation:*  
-    *Improving ERA and K/BB Ratio, while focusing on identifying CL and RP players for trades*
+*Recommendation:*  
+*Improving ERA and K/BB Ratio, while focusing on identifying CL and RP players for trades*
 
 ### Fielding
 
