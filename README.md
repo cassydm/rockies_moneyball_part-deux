@@ -31,7 +31,7 @@ Each team member performed several statistical analysis and visualizations to be
 
 To replicate or extend this analysis:
 
-1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, BeautifulSoup, Links,numpy,and matplotlib.pyplot.
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, BeautifulSoup, Links,numpy,and matplotlib.pyplot.)
 2. **Data:** Ensure access to relevant baseball reference files. 
 3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
 4. **Execution:** Run the code to analyze and visualize results.
@@ -39,4 +39,16 @@ To replicate or extend this analysis:
 ## Conclusion
 
 SUMMARIZE OUR CONCLUSIONS HERE
+
+### Batting
+
+### Pitching
+    2007 pitching roster out-performed the 2024 team in terms of preventing earned runs, striking-out batters and reducing the number of walks. 2024 closing pitchers and relief pitchers performed worse relative to the 2007 roster. 2024 starting pitchers showed fewer deficiencies regarding Home Runs Allowed, ERA and Strike-out to Ball Ratio. 
+
+    *Recommendation:*  
+    *Improving ERA and K/BB Ratio, while focusing on identifying CL and RP players for trades*
+
+### Fielding
+
+### Performance vs. Salary
 
