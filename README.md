@@ -27,6 +27,14 @@ Each team member performed several statistical analysis and visualizations to be
 
 4. What changes should be made to the 2024 Rockies player roster to get them to the World Series?
 
+## Usage Instructions
+
+To replicate or extend this analysis:
+
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Prophet).
+2. **Data:** Ensure access to relevant Google search and stock price data.
+3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
+4. **Execution:** Run the code to analyze and visualize results.
 
 ## Conclusion
 
