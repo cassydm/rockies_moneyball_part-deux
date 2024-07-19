@@ -31,8 +31,8 @@ Each team member performed several statistical analysis and visualizations to be
 
 To replicate or extend this analysis:
 
-1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Prophet).
-2. **Data:** Ensure access to relevant Google search and stock price data.
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, BeautifulSoup, Links,numpy,and matplotlib.pyplot.
+2. **Data:** Ensure access to relevant baseball reference files. 
 3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
 4. **Execution:** Run the code to analyze and visualize results.
 
