@@ -38,8 +38,6 @@ To replicate or extend this analysis:
 
 ## Conclusion
 
-SUMMARIZE OUR CONCLUSIONS HERE
-
 ### Batting
 
 ### Pitching
