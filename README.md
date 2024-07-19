@@ -4,42 +4,31 @@ DU AI Bootcamp Project 1.
 
 ## Overview
 
-You’re a growth analyst at Mercado Libre, tasked with analyzing the company's financial and user data to drive growth strategies. This challenge focuses on investigating the relationship between Google search traffic patterns and stock price movements.
+This analysis seeks to rejuvenate the Colorado Rockies by applying a "Moneyball" strategy, which involves a rigorous statistical analysis comparing the current players' performance metrics with those of the 2007 World Series team. By meticulously evaluating player statistics and identifying critical performance indicators, we aim to pinpoint strengths and weaknesses in the current lineup. Through this process, we will recommend targeted changes such as potential trades or acquisitions to optimize team composition and improve overall performance. 
 
-With over 200 million users, Mercado Libre is the leading e-commerce platform in Latin America. The goal is to determine if the ability to predict search traffic can provide insights into potential stock trading strategies.
+Our objective is to strategically position the Rockies for a return to the World Series, drawing on historical successes of the 2007 team and modern analytics to guide our decisions. With a focus on continuous monitoring and adaptive strategies, we envision a revitalized team that excels in the competitive landscape of Major League Baseball.
 
-## Challenge Steps
 
-### Step 1: Find Unusual Patterns in Hourly Google Search Traffic
+## Data Overview
 
-Explore the hourly Google search data to identify any unusual patterns or anomalies that could impact Mercado Libre's business operations and stock performance.
+Data was collected for the Rockies 2007 and 2024 rosters from Baseball Reference resource online. The team both scraped tables from the website and downloaded excel documents to perform our analysis. 
 
-### Step 2: Mine the Search Traffic Data for Seasonality
+The team took a 4-pronged approach to dividing and reviewing the data. Each team member looked at a specific subset of player statistics, including batting, pitching, and fielding. Additionally our team looked at appearance and salary data to help us determine whether certain players contribute their “worth”  to the Rockies. 
 
-Analyze the search traffic data to uncover seasonal trends or patterns that may influence user behavior and purchasing trends on the platform.
+Each team member performed several statistical analysis and visualizations to better understand how the 2007 and 2024 teams performed relative to each other and identify areas for the 2024 Rockies to improve. 
 
-### Step 3: Relate the Search Traffic to Stock Price Patterns
+## Questions to Answer
 
-Investigate correlations or relationships between fluctuations in search traffic and corresponding movements in Mercado Libre's stock prices.
+1. How do the batters in 2024 compare to 2007, and what needs to change in order to improve the team?
 
-### Step 4: Create a Time Series Model with Prophet
+2. How do Starting Pitchers, Relief Pitchers, and Closing Pitchers in 2024 compare to the 2007 roster, and what needs to change in order to improve the team?
 
-Utilize the Prophet library to build a robust time series model that forecasts future trends in search traffic. Evaluate how accurately this model can predict fluctuations in user interest and potential impacts on stock trading strategies.
+3. How do does the Rockies fielding compare between the 2007 and 2024 seasons?
+
+4. What changes should be made to the 2024 Rockies player roster to get them to the World Series?
+
 
 ## Conclusion
 
-By leveraging advanced analytical techniques and tools like Prophet, you aim to provide actionable insights that contribute to Mercado Libre's growth and success in the competitive e-commerce landscape of Latin America.
+SUMMARIZE OUR CONCLUSIONS HERE
 
-## Getting Started
-
-To replicate or extend this analysis:
-
-1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Prophet).
-2. **Data:** Ensure access to relevant Google search and stock price data.
-3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
-4. **Execution:** Run the code to analyze and visualize results.
-
-## Acknowledgments
-
-- Mercado Libre for providing the data and opportunity to explore growth strategies.
-- Open-source contributors to the Prophet library for enabling powerful time series forecasting.
