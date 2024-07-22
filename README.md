@@ -1,5 +1,7 @@
 # rockies_moneyball_part-deux
-DU AI Bootcamp Project 1. 
+DU AI Bootcamp Project 1.
+Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
+![Rockies Logo](https://upload.wikimedia.org/wikipedia/en/c/c0/Colorado_Rockies_full_logo.svg)
 # Prophet Challenge: Analyzing Search Traffic and Stock Price Patterns
 
 ## Overview
@@ -39,6 +41,7 @@ To replicate or extend this analysis:
 ## Conclusion
 
 ### Batting
+The 2024 Rockies team struggles heavily with their On Base Percentage (OBP), which is a very important stat when it comes to Moneyball Statistics. 2007 players at the Left Field, Right Field and Short Stop positions outpaced the players in 2024 in OBP, RBIs (Runs Batted in), and other important metrics. This analysis walks through a varaiety of those and identifies the batters who play LF, RF, and SS as areas of improvement when it comes to improving the Rockies record this season in hopes of a World Series push in the future.
 
 ### Pitching
 2007 pitching roster out-performed the 2024 team in terms of preventing earned runs, striking-out batters and reducing the number of walks. 2024 closing pitchers and relief pitchers performed worse relative to the 2007 roster. 2024 starting pitchers showed fewer deficiencies regarding Home Runs Allowed, ERA and Strike-out to Ball Ratio. 
