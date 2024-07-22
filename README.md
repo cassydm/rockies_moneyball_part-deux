@@ -2,7 +2,7 @@
 DU AI Bootcamp Project 1.
 Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 ![Rockies Logo](https://upload.wikimedia.org/wikipedia/en/c/c0/Colorado_Rockies_full_logo.svg)
-# Prophet Challenge: Analyzing Search Traffic and Stock Price Patterns
+# Project 1: Exploratory Data Analysis, "Moneyball Part Deux"
 
 ## Overview
 
