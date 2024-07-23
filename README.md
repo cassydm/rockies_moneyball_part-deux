@@ -38,7 +38,7 @@ To replicate or extend this analysis:
 3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
 4. **Execution:** Run the code to analyze and visualize results.
 
-## Conclusion
+## Analysis
 
 ### Batting
 The 2024 Rockies team struggles heavily with their On Base Percentage (OBP), which is a very important stat when it comes to Moneyball Statistics. 2007 players at the Left Field, Right Field and Short Stop positions outpaced the players in 2024 in OBP, RBIs (Runs Batted in), and other important metrics. 
