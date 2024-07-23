@@ -58,6 +58,52 @@ The 2007 Colorado Rockies team did out perform the 2024 team in terms of overall
 *Recommendation:*  
 *Improving fielding percentage for left field position, while focusing on identifying possible trades for this position*
 ### Performance vs. Salary
+Boxplot of Salary vs. WAR by Year:
+1. 2007 Data:
+    1. Salaries: Generally lower compared to 2024.
+    2. WAR Values: More evenly distributed, with fewer outliers and a balanced spread across the roster.
+    3. Callouts: Most players were likely paid less but contributed a solid performance to the team. The 2007 roster made it to the World Series, indicating a good return on investment.
+2. 2024 Data:
+    1. Salaries: Noticeably higher overall.
+    2. WAR Values: Higher variability with more significant outliers, indicating some players have much higher or lower performance compared to others.
+    3. Callouts: Some high-paid players have low WAR, indicating overpayment and underperformance. Conversely, there may be underpaid but highly performing players, showing possible inefficiencies in salary allocation.
+
+Clustering Analysis: 2007 and 2024 Roster Comparison
+
+1. 2007 Data:
+    1. Cluster 1: Low salary, high WAR
+        1. Players in this cluster are underpaid but highly performing. These players provide excellent value and are crucial to the team's success.
+        2. Action: Recognize these players and consider future salary adjustments to retain their talent.
+    2. Cluster 2: Low salary, low WAR
+        1. Players in this cluster are both underpaid and underperforming. These players might be younger or less experienced, contributing less to the team's success.
+        2. Action: Monitor their development and consider training or potential trades if performance doesn't improve.
+    3. Cluster 3: High salary, high WAR
+        1. Players in this cluster are paid well and perform well, indicating fair compensation for their contributions.
+        2. Action: Maintain and support these players as they are valuable assets to the team.
+
+2. 2024 Data:
+    1. Cluster 1: Low salary, high WAR
+        1. Similar to 2007, these players are underpaid but highly performing. They provide excellent value and are critical to the team's success.
+        2. Action: Consider renegotiating contracts to ensure they stay with the team and continue performing well.
+    2. Cluster 2: High salary, low WAR
+        1. Players in this cluster are overpaid and underperforming. They represent inefficiencies in salary allocation and do not contribute as expected.
+        2. Action: Evaluate the reasons for their underperformance and consider trades or releases to free up salary for more effective players.
+    3. Cluster 3: High salary, high WAR
+        1. These players are both highly paid and high performing, indicating fair compensation and valuable contributions to the team.
+        2. Action: Maintain and support these players, ensuring they continue to perform at a high level.
+
+Analysis of the Heatmap of Average WAR by Position and Year
+    1. Decline in Pitching Performance:
+        1. The significant decrease in average WAR for pitchers in 2024 compared to 2007 is concerning. Addressing this decline should be a priority, potentially through trades, drafting, or training.
+    2. Weakness in Infield:
+        1. The drop in WAR values for infield positions in 2024 highlights a potential area of weakness. Strengthening these positions through targeted acquisitions or player development can help improve the team's overall performance.
+    3. Stable Outfield Performance:
+        1. The outfield positions have maintained relatively stable performance levels, which is a positive sign. Continuing to support and develop these players will ensure this remains a strength for the team.
+    4. Improvement in Catcher Position:
+        1. The slight improvement in WAR for the catcher position in 2024 indicates progress. Ensuring continued development and support for catchers will be beneficial.
+
+
+
 
 
 ## Conclusion
