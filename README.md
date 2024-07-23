@@ -41,7 +41,10 @@ To replicate or extend this analysis:
 ## Conclusion
 
 ### Batting
-The 2024 Rockies team struggles heavily with their On Base Percentage (OBP), which is a very important stat when it comes to Moneyball Statistics. 2007 players at the Left Field, Right Field and Short Stop positions outpaced the players in 2024 in OBP, RBIs (Runs Batted in), and other important metrics. This analysis walks through a varaiety of those and identifies the batters who play LF, RF, and SS as areas of improvement when it comes to improving the Rockies record this season in hopes of a World Series push in the future.
+The 2024 Rockies team struggles heavily with their On Base Percentage (OBP), which is a very important stat when it comes to Moneyball Statistics. 2007 players at the Left Field, Right Field and Short Stop positions outpaced the players in 2024 in OBP, RBIs (Runs Batted in), and other important metrics. 
+
+*Recommendation:*  
+This analysis walks through a varaiety of those and identifies the batters who play LF, RF, and SS as areas of improvement when it comes to improving the Rockies record this season in hopes of a World Series push in the future.
 
 ### Pitching
 2007 pitching roster out-performed the 2024 team in terms of preventing earned runs, striking-out batters and reducing the number of walks. 2024 closing pitchers and relief pitchers performed worse relative to the 2007 roster. 2024 starting pitchers showed fewer deficiencies regarding Home Runs Allowed, ERA and Strike-out to Ball Ratio. 
@@ -56,3 +59,6 @@ The 2007 Colorado Rockies team did out perform the 2024 team in terms of overall
 *Improving fielding percentage for left field position, while focusing on identifying possible trades for this position*
 ### Performance vs. Salary
 
+
+## Conclusion
+In conclusion, the 2024 Rockies are struggling in a variety of key metrics that were much better during their 2007 World Series Campaign. The Rockies need to look at their Left and Right Field as well as their closing and relief pitchers and reassess their value on the team.
