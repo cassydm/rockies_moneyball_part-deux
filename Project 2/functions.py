@@ -70,7 +70,7 @@ def team_obp(team, date):
 
 
 
-'''function calculates various team stats per single game'''
+'''function calculates various team stats per single game. run this functioun multiple times with different stat names'''
 def team_stats(team, date, stat_name):
 
     # Define the date of the game
