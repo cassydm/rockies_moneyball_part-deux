@@ -42,7 +42,7 @@ for key,value in csv_files_dict.items():
 # Concatnating everything into one df
 mega_df=pd.concat(df_list,ignore_index=True)
 
-
+mega_df["Full_Date"]=mega_df["Date"]+", "+mega_df["Year"]
 # Define the range of years
 years = list(range(2013, 2024))
 
@@ -78,7 +78,7 @@ def convert_date_format(date_str):
     return 'Invalid date format'
 
 # Apply the function to the 'Date' column
-mega_df['Formatted_Date'] = mega_df['Date'].apply(convert_date_format)
+mega_df['Formatted_Date'] = mega_df['Full_Date'].apply(convert_date_format)
 
 #Creating a list from the df of all dates
 date_list=mega_df["Formatted_Date"].tolist()
