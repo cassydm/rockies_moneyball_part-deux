@@ -1,6 +1,8 @@
 import pandas as pd
 from pybaseball import statcast
+"""Note: functions were developed with the assistance of ChatGPT"""
 
+"""function calculates team batting average for a single game"""
 def team_batting_avg(team, date):
     # Define the date of the game
     game_date = str(date)
@@ -18,10 +20,11 @@ def team_batting_avg(team, date):
 
     # Calculate batting average
     batting_average = hits / at_bats if at_bats > 0 else 0
-    print(f"Team Batting Average for {game_date}: {batting_average:.3f}")
+    return batting_average
+    #print(f"Team Batting Average for {game_date}: {batting_average:.3f}")
 
 
-
+"""function calculates team's on base percentage per single game"""
 def team_obp(team, date):
     # Define the date of the game
     game_date = str(date)
@@ -41,11 +44,11 @@ def team_obp(team, date):
 
     # Calculate OBP
     obp = (hits + walks + hit_by_pitch) / (at_bats + walks + hit_by_pitch + sacrifice_flies) if (at_bats + walks + hit_by_pitch + sacrifice_flies) > 0 else 0
+    return obp
+    # print(f"Team OBP for {game_date}: {obp:.3f}")
 
-    print(f"Team OBP for {game_date}: {obp:.3f}")
 
-
-
+'''function calculates various team stats per single game'''
 def team_stats(team, date, stat_name):
     # Define the date of the game
     game_date = str(date)
