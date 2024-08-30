@@ -79,6 +79,8 @@ def convert_date_format(date_str):
 # Apply the function to the 'Date' column
 mega_df['Formatted_Date'] = mega_df['Full_Date'].apply(convert_date_format)
 
+#Removing invalid dates from the mega_df
+mega_df_cleaned = mega_df[mega_df['Formatted_Date'] != 'Invalid date format']
 #Creating a list from the df of all dates
 date_list=mega_df["Formatted_Date"].tolist()
 
