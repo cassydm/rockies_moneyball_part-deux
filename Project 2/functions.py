@@ -5,8 +5,8 @@ from datetime import datetime
 
 """function calculates team batting average for a single game"""
 def team_batting_avg(team, date):
-    # Define the date of the game
-    game_date = str(date)
+    # Convert input date to string and ensure it's in the correct format
+    game_date = pd.to_datetime(date).strftime('%Y-%m-%d')
     if pd.to_datetime(game_date) >= pd.to_datetime(datetime.today().strftime('%Y-%m-%d')):
         return -1
     else:
