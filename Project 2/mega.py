@@ -60,22 +60,21 @@ def convert_date_format(date_str):
     Returns:
         str: The date in 'YYYY-MM-DD' format or 'Invalid date format' if parsing fails.
     """
-    # Remove any non-date characters from the string
-    cleaned_date_str = re.sub(r'\(.*?\)', '', date_str).strip()  
-    # Remove anything in parentheses and strip leading/trailing spaces
+     # Remove any non-date characters from the string
+    cleaned_date_str = re.sub(r'\(.*?\)', '', date_str).strip()
     
-    # Try to extract the year if present
-    for year in years:
+    
+    # Try to parse the date string without the day and add a default day
+    try:
+        date_obj = datetime.strptime(cleaned_date_str, '%A %b %d, %Y')
+        return date_obj.strftime('%Y-%m-%d')
+    except ValueError:
+        # Try with a default day if the day is missing
         try:
-            # Try to parse with the current year
-            date_obj = datetime.strptime(cleaned_date_str + f', {year}', '%A %b %d, %Y')
+            date_obj = datetime.strptime(cleaned_date_str + ' 1, 2023', '%A %b %d, %Y')  # Default day and year
             return date_obj.strftime('%Y-%m-%d')
         except ValueError:
-            # If parsing fails, try the next year
-            continue
-    
-    # If no valid date found, return a placeholder value
-    return 'Invalid date format'
+            return 'Invalid date format'
 
 # Apply the function to the 'Date' column
 mega_df['Formatted_Date'] = mega_df['Full_Date'].apply(convert_date_format)
