@@ -10,21 +10,24 @@ def team_batting_avg(team, date):
     if pd.to_datetime(game_date) >= pd.to_datetime(datetime.today().strftime('%Y-%m-%d')):
         return -1
     else:
-        # Pull all Statcast data for that date
-        data = statcast(start_dt=game_date, end_dt=game_date, team=team)
+        try:
+            # Pull all Statcast data for that date
+            data = statcast(start_dt=game_date, end_dt=game_date, team=team)
 
-        # Filter data for the specific team (e.g., New York Yankees)
-        team_data = data
+            # Filter data for the specific team (e.g., New York Yankees)
+            team_data = data
 
-        # Calculate hits and at-bats
-        # 'events' column can be used to determine hits ('single', 'double', 'triple', 'home_run')
-        hits = team_data['events'].isin(['single', 'double', 'triple', 'home_run']).sum()
-        at_bats = team_data['events'].isin(['single', 'double', 'triple', 'home_run', 'strikeout', 'field_out', 'grounded_into_double_play']).sum()
+            # Calculate hits and at-bats
+            # 'events' column can be used to determine hits ('single', 'double', 'triple', 'home_run')
+            hits = team_data['events'].isin(['single', 'double', 'triple', 'home_run']).sum()
+            at_bats = team_data['events'].isin(['single', 'double', 'triple', 'home_run', 'strikeout', 'field_out', 'grounded_into_double_play']).sum()
 
-        # Calculate batting average
-        batting_average = hits / at_bats if at_bats > 0 else 0
-        return batting_average
-        #print(f"Team Batting Average for {game_date}: {batting_average:.3f}")
+            # Calculate batting average
+            batting_average = hits / at_bats if at_bats > 0 else 0
+            return batting_average
+            #print(f"Team Batting Average for {game_date}: {batting_average:.3f}")
+        except Exception:
+            return "error"
 
 
 """function calculates team's on base percentage per single game"""
