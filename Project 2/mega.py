@@ -29,7 +29,7 @@ def make_df_func(yr,path):
     #Renaming columns important
     df.rename(columns={"Unnamed: 4":"H/A"},inplace=True)
     df.drop("Unnamed: 2",axis=1,inplace=True)
-    df["H/A"].fillna("H",inplace=True)
+    df["H/A"]=df["H/A"].fillna("H")
     df["Year"]=yr
     df_list.append(df)
     return df
@@ -117,3 +117,4 @@ metric_df = col_df_list[0].join(col_df_list[1:], how='outer')
 
 #Concatnating the metric_df and the mega_df_cleaned
 mega_concat_df=pd.concat([mega_df_cleaned,metric_df],axis=1)
+mega_concat_df
