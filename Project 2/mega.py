@@ -29,7 +29,7 @@ def make_df_func(yr,path):
     #Renaming columns important
     df.rename(columns={"Unnamed: 4":"H/A"},inplace=True)
     df.drop("Unnamed: 2",axis=1,inplace=True)
-    df["H/A"].fillna("H",inplace=True)
+    df["H/A"]=df["H/A"].fillna("H")
     df["Year"]=yr
     df_list.append(df)
     return df
@@ -84,5 +84,37 @@ mega_df_cleaned = mega_df[mega_df['Formatted_Date'] != 'Invalid date format']
 #Creating a list from the df of all dates
 date_list=mega_df["Formatted_Date"].tolist()
 
+# Creating a dictionary for other metrics to add to mega_df
+col_concat_dict={"COL_atbats":"COL_atbats_column.csv",
+                 "COL_BA":"COL_ba_column.csv",
+                 "COL_Hits":"COL_hits_column.csv",
+                 "COL_HR":"COL_hr_column.csv",
+                 "COL_KK":"COL_kk_column.csv",
+                 "COL_OBP":"COL_obp_column.csv",
+                 "COL_walks":"COL_walks_column.csv"}
+#Creating a list to hold dataframes
+col_df_list=[]
+#Defining a function to create one dataframe from several different csv files.
+def make_df_cols(name,path):
+    """
+    Reads a CSV file into a DataFrame and appends it to the global list col_df_list.
 
-mega_df
+    Args:
+        name (str): The name associated with the DataFrame (not used in the function).
+        path (str): The filename of the CSV file to read.
+    """
+    path_first="../Project 2/progress_dataframes/"
+    path_second=path
+    full_path=path_first + path_second
+    df=pd.read_csv(full_path,index_col=0)
+    col_df_list.append(df)
+
+#Running the make_df_cols function through the dictionary
+for key,value in col_concat_dict.items():
+    result=make_df_cols(key,value)
+#Joining all of the csv files into one    
+metric_df = col_df_list[0].join(col_df_list[1:], how='outer')
+
+#Concatnating the metric_df and the mega_df_cleaned
+mega_concat_df=pd.concat([mega_df_cleaned,metric_df],axis=1)
+mega_concat_df
