@@ -116,5 +116,43 @@ for key,value in col_concat_dict.items():
 metric_df = col_df_list[0].join(col_df_list[1:], how='outer')
 
 #Concatnating the metric_df and the mega_df_cleaned
-mega_concat_df=pd.concat([mega_df_cleaned,metric_df],axis=1)
+mega_concat_df1=pd.concat([mega_df_cleaned,metric_df],axis=1)
+
+# Doing the same code but for opponent metrics of the same.
+
+# Creating a dictionary for opponent metrics to add to mega_df
+col_concat_opp_dict={"OPP_atbats":"Opp_atbats_column.csv",
+                 "OPP_BA":"Opp_ba_column.csv",
+                 "OPP_Hits":"Opp_hits_column.csv",
+                 "OPP_HR":"OPP_HR_column.csv",
+                 "OPP_KK":"OPP_strikeouts_column.csv",
+                 "OPP_OBP":"Opp_obp_column.csv",
+                 "OPP_walks":"Opp_walks_column.csv"}
+
+#Creating a list to hold opponent dataframes
+col_df_opp_list=[]
+
+#Defining a function to create one dataframe from several different csv files.
+def make_df_opp_cols(name,path):
+    """
+    Reads a CSV file into a DataFrame and appends it to the global list col_df_opp_list.
+
+    Args:
+        name (str): The name associated with the DataFrame (not used in the function).
+        path (str): The filename of the CSV file to read.
+    """
+    path_first="../Project 2/progress_dataframes_opp/"
+    path_second=path
+    full_path=path_first + path_second
+    df=pd.read_csv(full_path,index_col=0)
+    col_df_opp_list.append(df)
+
+#Running the make_df_opp_cols function through the dictionary
+for key,value in col_concat_opp_dict.items():
+    result=make_df_opp_cols(key,value)
+#Joining all of the csv files into one    
+metric_opp_df = col_df_opp_list[0].join(col_df_opp_list[1:], how='outer')
+
+#Concatnating the metric_opp_df and the mega_df_cleaned
+mega_concat_df=pd.concat([mega_concat_df1,metric_opp_df],axis=1)
 mega_concat_df
