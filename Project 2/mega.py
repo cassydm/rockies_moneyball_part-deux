@@ -156,3 +156,19 @@ metric_opp_df = col_df_opp_list[0].join(col_df_opp_list[1:], how='outer')
 #Concatnating the metric_opp_df and the mega_df_cleaned
 mega_concat_df=pd.concat([mega_concat_df1,metric_opp_df],axis=1)
 mega_concat_df
+
+#Making sure values in the table are usable!
+
+#Updating the wins column to be just W/L
+# Replace values in a column
+mega_concat_df['W/L'] = mega_concat_df['W/L'].replace('L-wo', 'L')
+mega_concat_df['W/L'] = mega_concat_df['W/L'].replace('W-wo', 'L')
+
+#Getting the metrics for analysis
+model_df=mega_concat_df[["Gm#","W/L","D/N","H/A","Opp",
+                         "COL_at_bats","COL_ba","COL_hits", "COL_hr","COL_kk","COL_obp","COL_walks",
+                         "Opp_at_bats","Opp_ba","Opp_hits","OPP_HR_Column","OPP_kk","Opp_obp","Opp_walks"]]
+
+#Removing rows of games that have not been played yet and putting them into their own df.
+unplayed_games=model_df.tail(27)
+model_df = model_df.iloc[:-27]
