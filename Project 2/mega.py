@@ -163,6 +163,7 @@ mega_concat_df
 # Replace values in a column
 mega_concat_df['W/L'] = mega_concat_df['W/L'].replace('L-wo', 'L')
 mega_concat_df['W/L'] = mega_concat_df['W/L'].replace('W-wo', 'L')
+mega_concat_df['H/A'] = mega_concat_df['H/A'].replace('@', 'A')
 
 #Getting the metrics for analysis
 model_df=mega_concat_df[["Gm#","W/L","D/N","H/A","Opp",
