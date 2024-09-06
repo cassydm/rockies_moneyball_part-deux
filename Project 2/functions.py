@@ -135,7 +135,23 @@ def team_ba_season(team):
 
 
 def team_obp_season(team):
+    batting_data = team_batting(2024)
+
+    if 'Team' in batting_data.columns:
+
+        if 'Team' in batting_data.columns and team in batting_data['Team'].values:
+            team_stats = batting_data[batting_data['Team'] == str(team)]
+        else:
+            return "No Team Data"
+    else:
+        return "No Team Column Found"
+    
+    hits_team = (team_stats['H'] + team_stats['BB'] + team_stats['HBP'])
+    atbats_team = (team_stats['AB'] + team_stats['BB'] + team_stats['HBP'] + team_stats['SF'])
+    OBP_team = hits_team / atbats_team
+
+    return OBP_team
 
 
 
-def team_stats_season(team, stat):
+'''def team_stats_season(team, stat):'''
