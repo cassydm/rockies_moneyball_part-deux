@@ -1,5 +1,5 @@
 import pandas as pd
-from pybaseball import statcast
+from pybaseball import statcast, team_batting
 from datetime import datetime
 """Note: functions were developed with the assistance of ChatGPT"""
 
@@ -108,3 +108,34 @@ def team_stats(team, date, stat_name):
             
         except Exception:
             return "error"
+        
+
+'''calculate a team's batting average for the season so far'''
+def team_ba_season(team):
+
+    batting_data = team_batting(2024)
+
+    if 'Team' in batting_data.columns:
+
+        if 'Team' in batting_data.columns and team in batting_data['Team'].values:
+            team_data = batting_data[batting_data['Team'] == str(team)]
+            # Calculate the total hits and at-bats
+            total_hits = team_data['H'].sum()
+            total_at_bats = team_data['AB'].sum()
+
+            # Calculate the batting average
+            batting_average = total_hits / total_at_bats if total_at_bats > 0 else 0
+            
+            # Display the result
+            return batting_average
+        else:
+            print("No Team Data")
+    else:
+        print("Team column error")
+
+
+def team_obp_season(team):
+
+
+
+def team_stats_season(team, stat):
