@@ -171,5 +171,5 @@ model_df=mega_concat_df[["Gm#","W/L","D/N","H/A","Opp",
                          "Opp_at_bats","Opp_ba","Opp_hits","OPP_HR_Column","OPP_kk","Opp_obp","Opp_walks"]]
 
 #Removing rows of games that have not been played yet and putting them into their own df.
-unplayed_games=model_df.tail(27)
-model_df = model_df.iloc[:-27]
+unplayed_games=model_df.tail(29)
+model_df = model_df.iloc[:-29]
