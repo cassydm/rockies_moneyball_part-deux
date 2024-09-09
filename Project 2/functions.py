@@ -136,22 +136,57 @@ def team_ba_season(team):
 
 def team_obp_season(team):
     batting_data = team_batting(2024)
-
+    team_stats = batting_data[batting_data['Team'] == str(team)]
+    
     if 'Team' in batting_data.columns:
-
-        if 'Team' in batting_data.columns and team in batting_data['Team'].values:
-            team_stats = batting_data[batting_data['Team'] == str(team)]
+        if not team_stats.empty:
+            # Calculate OBP for the team
+            obp = (team_stats['H'].values[0] + team_stats['BB'].values[0] + team_stats['HBP'].values[0]) / (team_stats['AB'].values[0] + team_stats['BB'].values[0] + team_stats['HBP'].values[0] + team_stats['SF'].values[0])
+            return obp
         else:
-            return "No Team Data"
+            return "Empty Data"
+
     else:
         return "No Team Column Found"
-    
-    hits_team = (team_stats['H'] + team_stats['BB'] + team_stats['HBP'])
-    atbats_team = (team_stats['AB'] + team_stats['BB'] + team_stats['HBP'] + team_stats['SF'])
-    OBP_team = hits_team / atbats_team
-
-    return OBP_team
 
 
 
-'''def team_stats_season(team, stat):'''
+
+def team_avg_stats_pergame(team, stat):
+    batting_data = team_batting(2024)
+    team_stats = batting_data[batting_data['Team'] == str(team)]
+
+    # at bat calcs
+    total_at_bats = team_stats['AB'].values[0]
+    games_played = team_stats['G'].values[0]
+    avg_at_bats_pergame = total_at_bats / games_played
+    # hits calcs
+    total_hits = team_stats['H'].values[0]
+    games_played = team_stats['G'].values[0]
+    avg_hits_per_game = total_hits / games_played
+    # walks calcs
+    total_walks = team_stats['BB'].values[0]
+    games_played = team_stats['G'].values[0]
+    avg_walks_per_game = total_walks / games_played
+    # home runs calcs
+    total_hr = team_stats['HR'].values[0]
+    games_played = team_stats['G'].values[0]
+    avg_hr_per_game = total_hr / games_played
+    # strikeouts calcs
+    total_strikeouts = team_stats['SO'].values[0]
+    games_played = team_stats['G'].values[0]
+    avg_strikeouts_per_game = total_strikeouts / games_played    
+
+    # return stat
+    if stat == "hits":
+        return avg_hits_per_game
+    elif stat == "walks":
+        return avg_walks_per_game
+    elif stat == "at bats":
+        return avg_at_bats_pergame
+    elif stat == "home runs":
+        return avg_hr_per_game
+    elif stat == "strikeouts":
+        return avg_strikeouts_per_game
+    else:
+        return "UNKNOWN"   
