@@ -110,7 +110,7 @@ In conclusion, the 2024 Rockies are struggling in a variety of key metrics that 
 DU AI Bootcamp Project 2.
 Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 
-# Project 2:  "Moneyball Part Deux", Predicting the Rockies 2024 remaining season using ML Models.​
+# Project 2:  Predicting the Rockies 2024 remaining season using Machine Learning Models, ​"Moneyball Part Deux"
 
 ## Overview
 This proposal seeks to continue our Money Ball analysis with the Colorado Rockies by using ML to predict the remaining 2024 season. 
