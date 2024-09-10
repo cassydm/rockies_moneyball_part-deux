@@ -1,5 +1,5 @@
 # rockies_moneyball_part-deux
-DU AI Bootcamp Project 1.
+DU AI Bootcamp Project 1 and 2.
 Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 ![Rockies Logo](https://upload.wikimedia.org/wikipedia/en/c/c0/Colorado_Rockies_full_logo.svg)
 
