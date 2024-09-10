@@ -103,8 +103,36 @@ Analysis of the Heatmap of Average WAR by Position and Year
         1. The slight improvement in WAR for the catcher position in 2024 indicates progress. Ensuring continued development and support for catchers will be beneficial.
 
 
-
-
-
 ## Conclusion
 In conclusion, the 2024 Rockies are struggling in a variety of key metrics that were much better during their 2007 World Series Campaign. The Rockies need to look at their Left and Right Field as well as their closing and relief pitchers and reassess their value on the team.
+
+
+DU AI Bootcamp Project 2.
+Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
+
+# Project 2:  "Moneyball Part Deux", Predicting the Rockies 2024 remaining season using ML Models.​
+
+## Overview
+This proposal seeks to continue our Money Ball analysis with the Colorado Rockies by using ML to predict the remaining 2024 season. 
+
+Data was cleansed and prepped to be used in six different Machine Learing Models. The team downloaded excel documents to perform our analysis and leveraged pystats to scrape the website.
+
+The team took a 6-pronged approach to utilize the ML model for Project 2.  Each team member looked at the same final datase (model_df). 
+
+Each team member performed scaling of the dataset, applied the model, and provided visualizations to better understand how well each model did against the relevant input. 
+
+## Question to Answer
+
+1. How will the Colorado Rockies perform the rest of the season?
+
+## Usage Instructions
+
+To replicate or extend this analysis:
+
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, BeautifulSoup, Links,numpy,and matplotlib.pyplot.)
+2. **Data:** Ensure access to relevant baseball reference files. 
+3. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
+4. **Execution:** Run the code to analyze and visualize results.
+
+## Conclusion
+In conclusion, the Colorado Rockies expect to finish the remaining 28 games with a -----------------------------------------------------------------------------------------
