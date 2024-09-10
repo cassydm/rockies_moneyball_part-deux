@@ -1,7 +1,12 @@
 # rockies_moneyball_part-deux
-DU AI Bootcamp Project 1.
+DU AI Bootcamp Project 1 and 2.
 Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 ![Rockies Logo](https://upload.wikimedia.org/wikipedia/en/c/c0/Colorado_Rockies_full_logo.svg)
+
+# Contents:
+> Project 1: Moneyball  
+> Project 2: Machine Learning
+
 # Project 1: Exploratory Data Analysis, "Moneyball Part Deux"
 
 ## Overview
@@ -103,8 +108,54 @@ Analysis of the Heatmap of Average WAR by Position and Year
         1. The slight improvement in WAR for the catcher position in 2024 indicates progress. Ensuring continued development and support for catchers will be beneficial.
 
 
-
-
-
 ## Conclusion
 In conclusion, the 2024 Rockies are struggling in a variety of key metrics that were much better during their 2007 World Series Campaign. The Rockies need to look at their Left and Right Field as well as their closing and relief pitchers and reassess their value on the team.
+
+
+DU AI Bootcamp Project 2.
+Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
+
+# Project 2:  Predicting the Rockies 2024 remaining season using Machine Learning Models, ​"Moneyball Part Deux"
+
+## Overview
+This proposal seeks to continue our Money Ball analysis with the Colorado Rockies by using ML to predict the remaining 2024 season. 
+
+Data was cleansed and prepped to be used in six different Machine Learing Models. The team downloaded excel documents to perform our analysis and leveraged pystats to scrape the website.
+
+The team took a 6-pronged approach to utilize the ML model for Project 2.  Each team member looked at the same final datase (model_df). 
+
+Each team member performed scaling of the dataset, applied the model, and provided visualizations to better understand how well each model did against the relevant input. 
+
+## Question to Answer
+
+1. How will the Colorado Rockies perform the rest of the season?
+
+## Machine Learning Models
+Tree-Based Models:​
+
+1. Decision Trees: Used to explore the branching possibilities of game outcomes based on specific conditions (e.g., opponent strength, game location). This model provides a clear, visual representation of how       different factors contribute to winning or losing.​
+
+2. Random Forests: An ensemble method that aggregates multiple decision trees to improve prediction accuracy. This model is particularly useful for capturing more nuanced relationships between variables and generalizing well across different scenarios.​
+
+Regression Models:​
+
+3. Linear Regression: Applied to identify linear relationships between game metrics (like hits or home runs) and outcomes. This model helped establish a baseline understanding of how individual variables impact performance.​
+
+4. Logistic Regression: Used to model the probability of categorical outcomes (win or loss). This approach provides a probabilistic perspective, estimating the likelihood of various game results based on historical data.​
+
+Advanced and Proximity-Based Models:​
+
+5. Support Vector Machines (SVM): Employed to handle more complex, non-linear relationships by finding the optimal boundary that separates different classes (win or loss). SVM is particularly effective in distinguishing outcomes when data points are not linearly separable.​
+
+6. K-Nearest Neighbors (KNN): Used for its intuitive approach to predicting outcomes based on the similarity of past games. KNN relies on proximity, comparing current games with similar historical games to make predictions.​
+## Usage Instructions
+
+To replicate or extend this analysis:
+
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, numpy, and matplotlib.pyplot).  
+2. **Data:** Ensure access to relevant baseball reference csv files. The model_df dataframe was leveraged from the mega.py file, which was the foundation for all the models.
+4. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
+5. **Execution:** Run the code to analyze and visualize results.
+
+## Conclusion
+The majority of the models did not perform well for predicting wins and losses. The method has a large flaw in using average season data for unplayed games which limits the usefulness of a model to very few factors, that don't necessarily contribute heavily to the outcome of a game like the statistics. In the future, it would be better to analyze player level information or use statistics to predict other factors besides wins and losses. Available data for future games is limited and there is not enough nuance to differentiate win/loss outcomes when the same team matchups perform back-to-back.
