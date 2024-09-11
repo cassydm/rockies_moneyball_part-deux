@@ -1,5 +1,5 @@
 import pandas as pd
-from pybaseball import statcast, team_batting
+from pybaseball import statcast, team_batting, team_batting_bref, schedule_and_record
 from datetime import datetime
 """Note: functions were developed with the assistance of ChatGPT"""
 
@@ -34,9 +34,6 @@ def team_batting_avg(team, date):
             return "error"
 
 
-
-
-
 """function calculates team's on base percentage per single game"""
 def team_obp(team, date):
 
@@ -65,9 +62,6 @@ def team_obp(team, date):
         
         except Exception:
             return "error"
-
-
-
 
 
 '''function calculates various team stats per single game. run this functioun multiple times with different stat names'''
@@ -112,81 +106,97 @@ def team_stats(team, date, stat_name):
 
 '''calculate a team's batting average for the season so far'''
 def team_ba_season(team):
+    from mega import model_df
 
-    batting_data = team_batting(2024)
+    if team == "COL":
+        avg_ba_pergame = (model_df["COL_ba"].sum()) / (model_df["COL_ba"].count())
+        return avg_ba_pergame
+    else:
+        team_stats = team_batting_bref(team, 2024)
+        batting_avg_column = 'BA'        
+        avg_obp_pergame_ba = team_stats[batting_avg_column].values[0]
+        return avg_obp_pergame_ba
 
-    if 'Team' in batting_data.columns:
 
-        if 'Team' in batting_data.columns and team in batting_data['Team'].values:
-            team_data = batting_data[batting_data['Team'] == str(team)]
-            # Calculate the total hits and at-bats
-            total_hits = team_data['H'].sum()
-            total_at_bats = team_data['AB'].sum()
+'''calculate a team's on base percentage average for the season so far'''
+def team_obp_season(team, df):
+    model_df = df.copy()
 
-            # Calculate the batting average
-            batting_average = total_hits / total_at_bats if total_at_bats > 0 else 0
-            
-            # Display the result
-            return batting_average
+    if team == "COL":
+        avg_obp_pergame = (model_df["COL_obp"].sum()) / (model_df["COL_obp"].count())
+        return avg_obp_pergame
+    else:
+        team_stats = team_batting(2024)
+        opp_team = team
+        team_stats = team_stats[team_stats['Team'] == opp_team]
+        avg_obp_pergame_opp = team_stats['OBP'].values[0]
+        return avg_obp_pergame_opp
+
+
+
+'''calculate a team's cumulative average statistic for the season so far'''
+def team_avg_stats_pergame(team, stat, df):
+
+    if team == "COL":
+        model_df = df.copy()
+        # at bat calcs
+        avg_at_bats_pergame = (float(model_df["COL_at_bats"].sum())) / (float(model_df["COL_at_bats"].count()))
+        # hits calcs
+        avg_hits_per_game = (float(model_df["COL_hits"].sum())) / (float(model_df["COL_hits"].count()))
+        # walks calcs
+        avg_walks_per_game = (float(model_df["COL_walks"].sum())) / (float(model_df["COL_walks"].count()))
+        # home runs calcs
+        avg_hr_per_game = (float(model_df["COL_hr"].sum())) / (float(model_df["COL_hr"].count()))
+        # strikeouts calcs
+        avg_kk_per_game = (float(model_df["COL_kk"].sum())) / (float(model_df["COL_kk"].count())) 
+
+        # return stat
+        if stat == "hits":
+            return avg_hits_per_game
+        elif stat == "walks":
+            return avg_walks_per_game
+        elif stat == "at bats":
+            return avg_at_bats_pergame
+        elif stat == "home runs":
+            return avg_hr_per_game
+        elif stat == "strikeouts":
+            return avg_kk_per_game
         else:
-            print("No Team Data")
+            return "COL STAT UNKNOWN"   
+        
     else:
-        print("Team column error")
+        team_stats = team_batting_bref(team, 2024)
+        team_schedule = schedule_and_record(2024, team)
+        games_played = len(team_schedule[team_schedule['Streak'].notnull()])
 
+        # return stat
+        if stat == "hits":
+            stat_abb = "H"    
+        
+        elif stat == "walks":
+            stat_abb = "BB"    
 
-def team_obp_season(team):
-    batting_data = team_batting(2024)
-    team_stats = batting_data[batting_data['Team'] == str(team)]
-    
-    if 'Team' in batting_data.columns:
-        if not team_stats.empty:
-            # Calculate OBP for the team
-            obp = (team_stats['H'].values[0] + team_stats['BB'].values[0] + team_stats['HBP'].values[0]) / (team_stats['AB'].values[0] + team_stats['BB'].values[0] + team_stats['HBP'].values[0] + team_stats['SF'].values[0])
-            return obp
+        elif stat == "at bats":
+            stat_abb = "AB"    
+        
+        elif stat == "home runs":
+            stat_abb = "HR"    
+        
+        elif stat == "strikeouts":
+            stat_abb = "SO"    
+
         else:
-            return "Empty Data"
+            return "OPPONENT STAT UNKNOWN"  
+        
+        # get and clean stat data
+        stat_pergame = pd.Series(team_stats[stat_abb])
+        stat_pergame_df = pd.DataFrame(stat_pergame.head(21))
+        stat_pergame_df = stat_pergame_df.reset_index(drop=True)
 
-    else:
-        return "No Team Column Found"
+        # calculate average per game
+        num_values = pd.to_numeric(stat_pergame_df[stat_abb], errors = 'coerce')
+        total = num_values.sum()
+        avg_pergame = total/games_played
 
+        return avg_pergame
 
-
-
-def team_avg_stats_pergame(team, stat):
-    batting_data = team_batting(2024)
-    team_stats = batting_data[batting_data['Team'] == str(team)]
-
-    # at bat calcs
-    total_at_bats = team_stats['AB'].values[0]
-    games_played = team_stats['G'].values[0]
-    avg_at_bats_pergame = total_at_bats / games_played
-    # hits calcs
-    total_hits = team_stats['H'].values[0]
-    games_played = team_stats['G'].values[0]
-    avg_hits_per_game = total_hits / games_played
-    # walks calcs
-    total_walks = team_stats['BB'].values[0]
-    games_played = team_stats['G'].values[0]
-    avg_walks_per_game = total_walks / games_played
-    # home runs calcs
-    total_hr = team_stats['HR'].values[0]
-    games_played = team_stats['G'].values[0]
-    avg_hr_per_game = total_hr / games_played
-    # strikeouts calcs
-    total_strikeouts = team_stats['SO'].values[0]
-    games_played = team_stats['G'].values[0]
-    avg_strikeouts_per_game = total_strikeouts / games_played    
-
-    # return stat
-    if stat == "hits":
-        return avg_hits_per_game
-    elif stat == "walks":
-        return avg_walks_per_game
-    elif stat == "at bats":
-        return avg_at_bats_pergame
-    elif stat == "home runs":
-        return avg_hr_per_game
-    elif stat == "strikeouts":
-        return avg_strikeouts_per_game
-    else:
-        return "UNKNOWN"   
