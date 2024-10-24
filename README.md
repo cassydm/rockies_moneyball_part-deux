@@ -178,7 +178,7 @@ Each team member performed scaling of the dataset, applied the model, and provid
 
 ## Question to Answer
 
-1. What pitch will the pitcher throw to the batter?
+1. What pitch type should the pitcher throw?
 
 ## Neural Network Models
 Recurrent Neural Networks (RNN):​
