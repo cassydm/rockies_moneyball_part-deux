@@ -170,7 +170,7 @@ DU AI Bootcamp Project 3. Created by: Liz Cooney, Howard Dixon, Cassy Miller, & 
 ## Overview
 This proposal seeks to develop an innovative app for the Colorado Rockies that leverages advanced analytics and ML —specifically utilizing transformer models in Python—to revolutionize pitching strategy.  
 
-Data was cleansed and prepped to be used Gradio, which allowed us to set up web-based interfaces to showcase our  model. The team downloaded existing Excel documents to compile information on the various Rockies pithchers and perform our analysis.
+Data was cleansed and prepped to be used with Gradio, which allowed us to set up web-based interfaces to showcase our  model. The team downloaded existing Excel documents to compile information on the various Rockies pithchers and perform our analysis.
 
 The team took a 6-pronged approach to utilize the ML model for Project 3.  Each team member looked at the same final datase (model_df). 
 
