@@ -195,7 +195,7 @@ Transformers:​
 
 To replicate or extend this analysis:
 
-1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, numpy and gradio).  
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, nump, gradio and LangChain and it's various components).  
 2. **Data:** Ensure access to relevant baseball reference csv files. The pitchers_df dataframe was leveraged from the five (5) Colorado starting pitchers data frames , which was the foundation for all the models.
 4. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
 5. **Execution:** Run the code to analyze and visualize results.
