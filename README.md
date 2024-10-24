@@ -1,11 +1,14 @@
 # rockies_moneyball_part-deux
-DU AI Bootcamp Project 1 and 2.
+DU AI Bootcamp Project 1, 2 and 3.
 Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 ![Rockies Logo](https://upload.wikimedia.org/wikipedia/en/c/c0/Colorado_Rockies_full_logo.svg)
 
 # Contents:
 > Project 1: Moneyball  
-> Project 2: Machine Learning
+> Project 2: Machine Learning  
+> Project 3: Neural Networks and Transformers
+
+
 
 # Project 1: Exploratory Data Analysis, "Moneyball Part Deux"
 
@@ -159,3 +162,42 @@ To replicate or extend this analysis:
 
 ## Conclusion
 The majority of the models did not perform well for predicting wins and losses. The method has a large flaw in using average season data for unplayed games which limits the usefulness of a model to very few factors, that don't necessarily contribute heavily to the outcome of a game like the statistics. In the future, it would be better to analyze player level information or use statistics to predict other factors besides wins and losses. Available data for future games is limited and there is not enough nuance to differentiate win/loss outcomes when the same team matchups perform back-to-back.
+
+DU AI Bootcamp Project 3. Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
+
+# Project 3:  Colorado Rockies Pitch App, "Moneyball Part III, The Trilogy"
+
+## Overview
+This proposal seeks to develop an innovative app for the Colorado Rockies that leverages advanced analytics and ML —specifically utilizing transformer models in Python—to revolutionize pitching strategy.  
+
+Data was cleansed and prepped to be used Gradio, which allowed us to set up web-based interfaces to showcase our  model. The team downloaded existing Excel documents to compile information on the various Rockies pithchers and perform our analysis.
+
+The team took a 6-pronged approach to utilize the ML model for Project 3.  Each team member looked at the same final datase (model_df). 
+
+Each team member performed scaling of the dataset, applied the model, and provided visualizations to better understand how well each model did against the relevant input. 
+
+## Question to Answer
+
+1. What pitch will the pitcher throw to the batter?
+
+## Neural Network Models
+Recurrent Neural Networks (RNN):​
+
+1. LSTM (Long Short-Term Memory): Designed to remember information for long periods, often used in language modeling.
+2. GRU (Gated Recurrent Unit): A simplified version of LSTM that is computationally efficient while maintaining performance.  
+   
+Transformers:​
+
+3. BERT (Bidirectional Encoder Representations from Transformers): Used for a variety of NLP tasks, focuses on understanding context.
+4. GPT (Generative Pre-trained Transformer): A model designed for generating human-like text based on prompts​
+
+## Usage Instructions
+
+To replicate or extend this analysis:
+
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, numpy and gradio).  
+2. **Data:** Ensure access to relevant baseball reference csv files. The pitchers_df dataframe was leveraged from the five (5) Colorado starting pitchers data frames , which was the foundation for all the models.
+4. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
+5. **Execution:** Run the code to analyze and visualize results.
+
+## Conclusion
