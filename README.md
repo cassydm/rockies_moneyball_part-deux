@@ -165,16 +165,15 @@ The majority of the models did not perform well for predicting wins and losses. 
 
 DU AI Bootcamp Project 3. Created by: Liz Cooney, Howard Dixon, Cassy Miller, & Sandokan Stage.
 
-# Project 3:  Colorado Rockies Pitch App, "Moneyball Part III, The Trilogy"
+# Project 3:  Colorado Rockies Pitch Perfect App, "Moneyball Part III, The Trilogy"
 
 ## Overview
 This proposal seeks to develop an innovative app for the Colorado Rockies that leverages advanced analytics and ML —specifically utilizing transformer models in Python—to revolutionize pitching strategy.  
 
-Data was cleansed and prepped to be used with Gradio, which allowed us to set up web-based interfaces to showcase our  model. The team downloaded existing Excel documents to compile information on the various Rockies pithchers and perform our analysis.
+The model utilizes data that was cleaned and processed on the Rockies Starting Pitchers. It contains pitch level data on every pitch these players have ever thrown, in order to predict the outcome of future pitches.
 
-The team took a 6-pronged approach to utilize the ML model for Project 3.  Each team member looked at the same final datase (model_df). 
-
-Each team member performed scaling of the dataset, applied the model, and provided visualizations to better understand how well each model did against the relevant input. 
+The model created was a neural network, utilizing an embedding layer for batter / other features, and two hidden layers to predict the outcome of a pitch being a strike or other. Key features include: Pitch count, batter, handiness, inning, balls/strikes at time of pitch, trailing pitch, runners on bases.
+The model was saved and deployed for future predictions and use within applications.
 
 ## Question to Answer
 
@@ -183,8 +182,7 @@ Each team member performed scaling of the dataset, applied the model, and provid
 ## Neural Network Models
 Recurrent Neural Networks (RNN):​
 
-1. LSTM (Long Short-Term Memory): Designed to remember information for long periods, often used in language modeling.
-2. GRU (Gated Recurrent Unit): A simplified version of LSTM that is computationally efficient while maintaining performance.  
+The model (pitching_model.h5) utilizes keras and sklearn in its development to predict a binary outcome (strike or other).
    
 Transformers:​
 
@@ -195,9 +193,14 @@ Transformers:​
 
 To replicate or extend this analysis:
 
-1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, nump, gradio and LangChain and it's various components).  
-2. **Data:** Ensure access to relevant baseball reference csv files. The pitchers_df dataframe was leveraged from the five (5) Colorado starting pitchers data frames , which was the foundation for all the models.
+1. **Setup:** Install Python, Jupyter Notebook, and necessary libraries (including Pandas, requests, pybaseball, nump, gradio, tensorflow, sklearn, and LangChain and all various components).  
+2. **Data:** Ensure access to relevant baseball reference csv files. The pitchers_df dataframe was leveraged from the five (5) Colorado starting pitchers data frames , which was the foundation for all the models. Example test data can be found in the project 3 data folder under model_testing_data and model_testing_data2. These csv files can be uploaded into the gradio app in the NN_Model_testing file to be analyzed for predictions.
 4. **Code:** Refer to the provided Python scripts or notebooks for implementation details.
 5. **Execution:** Run the code to analyze and visualize results.
 
 ## Conclusion
+
+The model achieved 84% accuracy, which is an ideal starting point for future use. There are opportunities for the model and test data to be revised for easier use and implementation. There are a number of things that can be done to improve the quality of the model, such as changing home/away teams from encoded values to a simpler boolean of rockies_home_true for instance. Additionally, the model can be implemented in future app developments to work more like a chatbot as originally intended, however the team does not have the resources at present to make this a reality. 
+
+
+### Overall, our team has gone through extensive projects to analyze the Colorado Rockies and their statistics as baseball is such a stat-centered sport. There are many opportunities for teams to implement AI into their decision making and analysis, and we are excited and proud of all of our hard work in data engneering. 
