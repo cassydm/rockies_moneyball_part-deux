@@ -170,7 +170,7 @@ DU AI Bootcamp Project 3. Created by: Liz Cooney, Howard Dixon, Cassy Miller, & 
 ## Overview
 This proposal seeks to develop an innovative app for the Colorado Rockies that leverages advanced analytics and ML —specifically utilizing transformer models in Python—to revolutionize pitching strategy.  
 
-The model utilizes data that was cleaned and processed on the Rockies Starting Pitchers. It contains pitch level data on every pitch these players have ever thrown, in order to predict the outcome of future pitches.
+The model utilizes data that was cleaned and processed on the 2024 Rockies Starting Pitchers. It contains pitch level data on every pitch these players have ever thrown, in order to predict the outcome of future pitches.
 
 The model created was a neural network, utilizing an embedding layer for batter / other features, and two hidden layers to predict the outcome of a pitch being a strike or other. Key features include: Pitch count, batter, handiness, inning, balls/strikes at time of pitch, trailing pitch, runners on bases.
 The model was saved and deployed for future predictions and use within applications.
