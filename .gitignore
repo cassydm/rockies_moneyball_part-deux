@@ -161,3 +161,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 Project 3/.streamlit/secrets.toml
+Project 3/.gradio/certificate.pem
+Project 3/db/78ff96dd-8c87-47bf-8bd6-d78b4aae6b69/data_level0.bin
+Project 3/db/78ff96dd-8c87-47bf-8bd6-d78b4aae6b69/header.bin
+Project 3/db/78ff96dd-8c87-47bf-8bd6-d78b4aae6b69/index_metadata.pickle
+Project 3/db/78ff96dd-8c87-47bf-8bd6-d78b4aae6b69/length.bin
+Project 3/db/78ff96dd-8c87-47bf-8bd6-d78b4aae6b69/link_lists.bin
