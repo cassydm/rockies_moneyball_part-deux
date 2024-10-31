@@ -39,33 +39,33 @@ wiki_list = [
     'Baseball_rules',
     'Major_League_Baseball',
     'Origins_of_baseball',
-    '2024_Major_League_Baseball_season',
-    'List_of_World_Series_champions',
-    'Baseball_positioning',
-    'Baseball_positions',
-    'Batting_(baseball)',
-    'Base_running',
-    'The_Official_Professional_Baseball_Rules_Book',
-    'Inside_baseball_(strategy)',
-    'Pitch_(baseball)',
-    'Pitcher',
-    'Starting_pitcher',
-    'Win_probability',
-    'Batting_order_(baseball)',
-    'Bunt_(baseball)',
-    'Double_switch_(baseball)',
-    'Lefty-righty_switch',
-    'Pickoff',
-    'Power_hitter',
-    'Power_pitcher',
-    'Pull_hitter',
-    'Left-handed_specialist#Right-handed_specialist',
-    'Small_ball_(baseball)',
-    'Intentional_balk',
-    'Infield_shift',
-    'The_Hidden_Game_of_Baseball',
-    'Wins_Above_Replacement'
-    ]
+    '2024_Major_League_Baseball_season']
+    # 'List_of_World_Series_champions',
+    # 'Baseball_positioning',
+    # 'Baseball_positions',
+    # 'Batting_(baseball)',
+    # 'Base_running',
+    # 'The_Official_Professional_Baseball_Rules_Book',
+    # 'Inside_baseball_(strategy)',
+    # 'Pitch_(baseball)',
+    # 'Pitcher',
+    # 'Starting_pitcher',
+    # 'Win_probability',
+    # 'Batting_order_(baseball)',
+    # 'Bunt_(baseball)',
+    # 'Double_switch_(baseball)',
+    # 'Lefty-righty_switch',
+    # 'Pickoff',
+    # 'Power_hitter',
+    # 'Power_pitcher',
+    # 'Pull_hitter',
+    # 'Left-handed_specialist#Right-handed_specialist',
+    # 'Small_ball_(baseball)',
+    # 'Intentional_balk',
+    # 'Infield_shift',
+    # 'The_Hidden_Game_of_Baseball',
+    # 'Wins_Above_Replacement'
+    # ]
 
 def clear_history():
     if 'crc' in st.session_state:
@@ -96,7 +96,7 @@ def load_information():
         vector_store = Chroma.from_documents(chunks, embedding=embeddings, persist_directory='db')
 
         llm = ChatOpenAI(model='gpt-4', temperature=0.7)
-        retriever = vector_store.as_retriever(search_kwargs={"k": 45})
+        retriever = vector_store.as_retriever(search_kwargs={"k": 10})
         memory = ConversationBufferMemory(
             memory_key="chat_history",
             return_messages=True,
@@ -151,7 +151,7 @@ st.title('Chat with our AI Coach about the Colorado Rockies')
 if 'crc' not in st.session_state:
     st.session_state.crc = load_information()
     if st.session_state.crc:
-        st.success("Wikipedia content processed and embedded successfully.")
+        st.success("PDF and Wikipedia content processed and embedded successfully.")
 
 # Create a form for the question input and submit button
 with st.form(key='question_form'):
